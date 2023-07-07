@@ -1,0 +1,41 @@
+# pip install CurrencyConverter
+
+from currency_converter import CurrencyConverter
+a=CurrencyConverter()
+
+fromCurrency = input("From Currency : ")
+toCurrency = input("To Currency : ")
+amount = int(input("Enter Amount : "))
+
+print(a.convert(amount, fromCurrency, toCurrency))
+
+# ALL INCLUDED CURRENCIES
+
+# INR - INDIA
+# JPY - JAPANESE YEN
+# BGN - BULGARIAN LEV
+# CZK - CZECH KORUNA
+# DKK - DANISH KRONE
+# GBP - POUND STRELING
+# HUF - HUNGARIAN FORINT
+# PLN - POLISH ZLOTY
+# RON - ROMANIAN LEU
+# SEK - SWEDISH KRONA
+# NOK - NORWEGIAN KRONE
+# TRY - TURKISH LIRA
+# AUD - AUSTRALIAN DOLLAR
+# BRL - BRAZILIAN REAL
+# CAD - CANADIAN DOLLAR
+# CNY - CHINESE YUAN RENMINBI
+# HKD - HONG KONG DOLLAR
+# IDR - INDONESIAN RUPIAH
+# ILS - ISRAELI SHEKEL
+# ZAR - SOUTH AFRICAN RAND
+# KRW - SOUTH KOREAN WON
+# MXN - MEXICAN PESO
+# MYR - MALAYSIAN RINGGIT
+# NZD - NEW ZEALAND DOLLAR
+# PHP - PHILIPPINE PESO
+# SGD - SINGAPORE DOLLAR
+# THB - THAI BAHT
+# USD - US DOLLAR
