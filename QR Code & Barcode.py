@@ -2,6 +2,7 @@
 # pip install python-barcode
 # pip install "python-barcode[images]"
 
+# https://www.microsoft.com/en-in/download/details.aspx?id=40784
 # pip install pyzbar
 # pip install pyzbar[scripts]
 

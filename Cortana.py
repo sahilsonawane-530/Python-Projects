@@ -229,5 +229,10 @@ if __name__ == "__main__":
             os.startfile("C:/Windows/System32/calc.exe")
         
         elif "break" in query or "shut" in query or "shut up" in query or "shutdown" in query or "exit" in query:
-            speak("Thank you for using me.")
-            exit()
+            hour = int(datetime.datetime.now().hour)
+            if (23 <= hour < 3):
+                speak("Thank you for using me, good night")
+                exit()
+            else:
+                speak("Thank you for using me.")
+                exit()
