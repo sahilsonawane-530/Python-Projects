@@ -153,9 +153,9 @@ if __name__ == "__main__":
 
             for article in news["articles"]:
                 print(article["title"])
-                speak(article["title"])
                 print(article["description"])
                 print("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+                speak(article["title"])
 
         elif "day" in query:
             strDay = time.strftime("%A")
