@@ -11,9 +11,10 @@ def Merge():
 
     merger = PdfMerger()
     
+    mergePDF = input("File to be saved at : ")
     for file in files:
         merger.append(file)
-    merger.write(f"{pdfPath}Merged.pdf")
+    merger.write(mergePDF)
     merger.close()
     print("\nMerged Pdf has been saved successfully.")
 
