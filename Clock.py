@@ -55,8 +55,8 @@ def WorldClock():
 def Stopwatch():
     ''' Stopwatch '''
     hours = 0
-    minutes = 59
-    seconds = 58
+    minutes = 0
+    seconds = 0
 
     print("Press \"ENTER\" to start ")
     while True:
