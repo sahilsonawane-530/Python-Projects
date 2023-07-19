@@ -16,6 +16,7 @@ import requests
 import json
 from pytube import YouTube
 import string
+from pyautogui import hotkey
 
 engine = pyttsx3.init()
 voices = engine.getProperty("voices")
@@ -63,14 +64,6 @@ def takeCommand():
         return "None"
     return query
 
-def sendEmail(to, content):
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.ehlo()
-    server.starttls
-    server.login("sahilsonawane530@gmail.com", "password-here")
-    server.sendmail("sahilsonawane530@gmail.com", to, content)
-    server.close()
-
 def Audio():
     ''' Downloads an audio file from youtube '''
     yt = YouTube(url)
@@ -88,9 +81,10 @@ def Video():
     speak(f"Your file is saved at {os.path.abspath(filename)}")
 
 if __name__ == "__main__":
-    wishMe()
+    # wishMe()
     while True:
-        query = takeCommand().lower()
+        # query = takeCommand().lower()
+        query = "refresh drivers"
 
         # Logic for executing tasks based on query
         if "wish me" in query:
@@ -122,11 +116,12 @@ if __name__ == "__main__":
         elif "open notes" in query:
             webbrowser.get("C:/Program Files/Google/Chrome/Application/chrome.exe %s").open("keep.google.com")
         
-        # FIXME: want to print which music is being played
         elif "music" in query:
-            musicDir = "C:/Users/sahil/Music"
+            musicDir = "C:/Users/sahil/Music/"
             songs = os.listdir(musicDir)
-            randomSong = songs[random.randint(0,5)]
+            randomSong = songs[random.randint(0,len(songs))]
+            if (randomSong == "desktop.ini"):
+                randomSong = songs[random.randint(0,len(songs))]
             os.startfile(os.path.join(musicDir, randomSong))
             print("Playing...")
             print(randomSong.removesuffix(".mp3" or ".mp4" or ".webm"))
@@ -147,7 +142,8 @@ if __name__ == "__main__":
             date = datetime.date.today()
             speak("What news would you like to hear?")
             news = takeCommand()
-            url = f"https://newsapi.org/v2/everything?q={news}&from{date}&sortBy=publishedAt&apiKey=62654f70fea24d519fdf5a3e0a81b677"
+            apiKey = open("C:/API/News.txt", "r").read()
+            url = f"https://newsapi.org/v2/everything?q={query}&from{date}&sortBy=publishedAt&apiKey={apiKey}"
             r=requests.get(url)
             news = json.loads(r.text)
 
@@ -200,9 +196,14 @@ if __name__ == "__main__":
         elif "open bash" in query:
             os.startfile("C:/Git/git-bash.exe")
         
-        # FIXME: open settings
         elif "open settings" in query:
-            os.startfile("C:/Windows/System32/DpiScaling.exe")
+            hotkey("win", "i")
+        
+        elif "refresh drivers" in query:
+            hotkey("win", "ctrl", "shift", "b")
+
+        elif ("screen shot" in query) or ("screenshot" in query):
+            hotkey("win", "shift", "s")
         
         elif "open file system" in query:
             os.startfile("C:/Windows/explorer.exe")
