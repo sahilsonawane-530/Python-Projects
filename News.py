@@ -6,7 +6,8 @@ from datetime import date
 
 date = date.today()
 query = input("News you are interested in : ")
-url = f"https://newsapi.org/v2/everything?q={query}&from{date}&sortBy=publishedAt&apiKey=62654f70fea24d519fdf5a3e0a81b677"
+apiKey = open("C:/API/News.txt", "r").read()
+url = f"https://newsapi.org/v2/everything?q={query}&from{date}&sortBy=publishedAt&apiKey={apiKey}"
 r=requests.get(url)
 news = json.loads(r.text)
 
