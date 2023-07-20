@@ -2,6 +2,8 @@
 # pip install speechRecognition
 # pip install wikipedia
 # pip install requests
+# pip install pytube
+# pip install pyautogui
 
 import pyttsx3
 import datetime
@@ -11,12 +13,12 @@ import webbrowser
 import os
 import random
 import time
-import smtplib
 import requests
 import json
 from pytube import YouTube
 import string
 from pyautogui import hotkey
+from ctypes import windll
 
 engine = pyttsx3.init()
 voices = engine.getProperty("voices")
@@ -81,10 +83,9 @@ def Video():
     speak(f"Your file is saved at {os.path.abspath(filename)}")
 
 if __name__ == "__main__":
-    # wishMe()
+    wishMe()
     while True:
-        # query = takeCommand().lower()
-        query = "refresh drivers"
+        query = takeCommand().lower()
 
         # Logic for executing tasks based on query
         if "wish me" in query:
@@ -205,8 +206,18 @@ if __name__ == "__main__":
         elif ("screen shot" in query) or ("screenshot" in query):
             hotkey("win", "shift", "s")
         
+        elif ("lock") in query:
+            windll.user32.LockWorkStation()
+            break
+        
+        elif "close" in query:
+            hotkey("alt", "f4")
+        
         elif "open file system" in query:
-            os.startfile("C:/Windows/explorer.exe")
+            hotkey("win", "e")
+        
+        elif "mail" in query:
+            hotkey("win", "6")
         
         elif "open note pad" in query:
             os.startfile("C:/Windows/notepad.exe")
@@ -228,11 +239,16 @@ if __name__ == "__main__":
         
         elif "calculator" in query:
             os.startfile("C:/Windows/System32/calc.exe")
-        
-        elif "break" in query or "shut" in query or "shut up" in query or "shutdown" in query or "exit" in query:
+
+        elif ("shutdown windows" in query) or ("windows shutdown" in query):
+            hotkey("win", "x")
+            hotkey("u", "u")
+            break
+
+        elif ("break" in query) or ("shut" in query) or ("shut up" in query) or ("shutdown" in query) or ("exit" in query):
             hour = int(datetime.datetime.now().hour)
             if (23 <= hour < 3):
-                speak("Thank you for using me, good night")
+                speak("Thank you for using me, good night.")
                 exit()
             else:
                 speak("Thank you for using me.")
