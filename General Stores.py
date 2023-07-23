@@ -9,112 +9,112 @@ while userInputItem != "q":
     if (userInputItem == "maggie"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 15 * userInputQuantity
-        bill.append(f"Maggie --- {userInputQuantity} --- {userInputQuantity*15}")
+        bill.append(f"Maggie --- 15 --- {userInputQuantity} --- {userInputQuantity*15}")
     
     elif (userInputItem == "noodles"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Noodles --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Noodles --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "pasta"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 40 * userInputQuantity
-        bill.append(f"Pasta --- {userInputQuantity} --- {userInputQuantity*40}")
+        bill.append(f"Pasta --- 40 --- {userInputQuantity} --- {userInputQuantity*40}")
     
     elif (userInputItem == "eggs"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 60 * userInputQuantity
-        bill.append(f"Eggs --- {userInputQuantity} --- {userInputQuantity*60}")
+        bill.append(f"Eggs --- 60 --- {userInputQuantity} --- {userInputQuantity*60}")
     
     elif (userInputItem == "bread"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 25 * userInputQuantity
-        bill.append(f"Bread --- {userInputQuantity} --- {userInputQuantity*25}")
+        bill.append(f"Bread --- 25 --- {userInputQuantity} --- {userInputQuantity*25}")
     
     elif (userInputItem == "cheese"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 30 * userInputQuantity
-        bill.append(f"Cheese --- {userInputQuantity} --- {userInputQuantity*30}")
+        bill.append(f"Cheese --- 30 --- {userInputQuantity} --- {userInputQuantity*30}")
     
     elif (userInputItem == "tomato"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 30 * userInputQuantity
-        bill.append(f"Tomato --- {userInputQuantity} --- {userInputQuantity*30}")
+        bill.append(f"Tomato --- 30 --- {userInputQuantity} --- {userInputQuantity*30}")
     
     elif (userInputItem == "rice"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 50 * userInputQuantity
-        bill.append(f"Rice --- {userInputQuantity} --- {userInputQuantity*50}")
+        bill.append(f"Rice --- 50 --- {userInputQuantity} --- {userInputQuantity*50}")
     
     elif (userInputItem == "popcorn"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Popcorn --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Popcorn --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "juice"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Juice --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Juice --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "coconut oil"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 40 * userInputQuantity
-        bill.append(f"Coconut Oil --- {userInputQuantity} --- {userInputQuantity*40}")
+        bill.append(f"Coconut Oil --- 40 --- {userInputQuantity} --- {userInputQuantity*40}")
     
     elif (userInputItem == "butter"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 35 * userInputQuantity
-        bill.append(f"Butter --- {userInputQuantity} --- {userInputQuantity*35}")
+        bill.append(f"Butter --- 35 --- {userInputQuantity} --- {userInputQuantity*35}")
     
     elif (userInputItem == "tea"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 10 * userInputQuantity
-        bill.append(f"Tea --- {userInputQuantity} --- {userInputQuantity*10}")
+        bill.append(f"Tea --- 10 --- {userInputQuantity} --- {userInputQuantity*10}")
 
     elif (userInputItem == "coffee"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Coffee --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Coffee --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "biscuit"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Biscuit --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Biscuit --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "milk"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 56 * userInputQuantity
-        bill.append(f"Milk --- {userInputQuantity} --- {userInputQuantity*56}")
+        bill.append(f"Milk --- 56 --- {userInputQuantity} --- {userInputQuantity*56}")
     
     elif (userInputItem == "yoghurt"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 30 * userInputQuantity
-        bill.append(f"Yoghurt --- {userInputQuantity} --- {userInputQuantity*30}")
+        bill.append(f"Yoghurt --- 30 --- {userInputQuantity} --- {userInputQuantity*30}")
     
     elif (userInputItem == "curd"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Curd --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Curd --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
     elif (userInputItem == "masala"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Masala --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Masala --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
         
     elif (userInputItem == "salt"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Salt --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Salt --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
         
     elif (userInputItem == "sugar"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 40 * userInputQuantity
-        bill.append(f"Sugar --- {userInputQuantity} --- {userInputQuantity*40}")
+        bill.append(f"Sugar --- 40 --- {userInputQuantity} --- {userInputQuantity*40}")
     
     elif (userInputItem == "water"):
         userInputQuantity = int(input("Enter quantity : "))
         cart = cart + 20 * userInputQuantity
-        bill.append(f"Water --- {userInputQuantity} --- {userInputQuantity*20}")
+        bill.append(f"Water --- 20 --- {userInputQuantity} --- {userInputQuantity*20}")
     
 print()
 for i in bill:
