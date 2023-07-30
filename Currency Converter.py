@@ -1,13 +1,18 @@
 # pip install CurrencyConverter
 
 from currency_converter import CurrencyConverter
-a=CurrencyConverter()
 
 fromCurrency = input("From Currency : ")
+fromCurrency = fromCurrency.upper()
+
 toCurrency = input("To Currency : ")
+toCurrency =toCurrency.upper()
+
 amount = int(input("Enter Amount : "))
 
-print(a.convert(amount, fromCurrency, toCurrency))
+converter=CurrencyConverter()
+convertedAmount = converter.convert(amount, fromCurrency, toCurrency)
+print(convertedAmount)
 
 # ALL INCLUDED CURRENCIES
 
