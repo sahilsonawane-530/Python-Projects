@@ -20,11 +20,15 @@ url = input("Enter url : ")
 downloadFormat = input("Enter format : ")
 filename = input("Enter file name : ")
 
-if (downloadFormat == "Video") or (downloadFormat == "video") or (downloadFormat == ".mp4") or (downloadFormat == "mp4"):
-    Video()
+try:
+    yt=YouTube(url)
+    if (downloadFormat == "Video") or (downloadFormat == "video") or (downloadFormat == ".mp4") or (downloadFormat == "mp4"):
+        Video()
+    
+    elif (downloadFormat == "Audio") or (downloadFormat == "audio") or (downloadFormat == ".mp3") or (downloadFormat == "mp3") or (downloadFormat == ".webm") or (downloadFormat == "webm"):
+        Audio()
+    else:
+        raise ValueError()
 
-elif (downloadFormat == "Audio") or (downloadFormat == "audio") or (downloadFormat == ".mp3") or (downloadFormat == "mp3") or (downloadFormat == ".webm") or (downloadFormat == "webm"):
-    Audio()
-
-else:
-    raise ValueError()
+except Exception as e:
+    print(f"Error: {e}")
