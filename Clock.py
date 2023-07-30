@@ -5,7 +5,7 @@ from playsound import playsound
 import time
 from winsound import Beep
 from datetime import datetime
-from pytz import timezone
+from pytz import timezone, all_timezones
 
 def Alarm():
     ''' Ring's at a specific time '''
@@ -48,6 +48,10 @@ def WorldClock():
     
     # Convert to {input} time zone
     country = input("Enter Country : ")
+    if (country == "timezones"):
+        for tz in all_timezones:
+            print(tz)
+        country = input("Enter Country : ")
     nowTime = now_utc.astimezone(timezone(country))
     formation = f"\nDate in {country} : {date}\nTime in {country} : {time}\nTime Zone followed by {country} : {timeZoneFollowed}\n{timeZoneFollowed} compared to GMT : {GMTcompared}"
     print(nowTime.strftime(formation))
@@ -86,19 +90,21 @@ def CountdownTimer():
     ''' Ring's once the given time ends '''
     
     timeElapsed = 0
+    hours = int(input("Hours to wait : "))
     minutes = int(input("Minutes to wait : "))
     seconds = int(input("Seconds to wait : "))
-    totalSeconds = minutes * 60 + seconds
+    totalSeconds = (hours * 3600) + (minutes * 60) + seconds
 
     while (timeElapsed < totalSeconds):
         time.sleep(1)
         timeElapsed = timeElapsed + 1
 
         timeLeft = totalSeconds - timeElapsed
-        minutesLeft = timeLeft // 60
+        hoursLeft = timeLeft // 3600
+        minutesLeft = (timeLeft % 3600) // 60
         secondsLeft = timeLeft % 60
 
-        print(f"{minutesLeft:02d}:{secondsLeft:02d}", end="\r")
+        print(f"{hoursLeft:02d}:{minutesLeft:02d}:{secondsLeft:02d}", end="\r")
     
     Beep(frequency=2500, duration=5000)
 
