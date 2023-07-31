@@ -4,6 +4,7 @@
 # pip install requests
 # pip install pytube
 # pip install pyautogui
+# pip install PyAudio
 
 import pyttsx3
 import datetime
