@@ -48,7 +48,7 @@ def WorldClock():
     
     # Convert to {input} time zone
     country = input("Enter Country : ")
-    if (country == "timezones"):
+    if (country == "timezones") or (country == "all timezones") or (country == "all time") or (country == "tz") or (country == "tmz"):
         for tz in all_timezones:
             print(tz)
         country = input("Enter Country : ")
@@ -70,7 +70,8 @@ def Stopwatch():
                 seconds = seconds + 1
                 if seconds >= 60:
                     minutes = minutes + 1
-                    seconds = 0
+                    seconds = 1
+                    Beep(frequency=2500, duration=1000)
 
                 if minutes >= 60:
                     hours = hours + 1
