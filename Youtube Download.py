@@ -6,14 +6,12 @@ from pytube import YouTube
 
 def Audio():
     yt = YouTube(url)
-    aud = yt.streams.last().download(filename=filename)
+    audio = yt.streams.filter(only_audio=True).first().download(filename=filename)
     print("Your file is saved at", os.path.abspath(filename))
 
 def Video():
     yt = YouTube(url)
-    video = yt.streams
-    vid = list(enumerate(video))
-    video[2].download(filename=filename)
+    video = yt.streams.get_highest_resolution().download(filename=filename)
     print("Your file is saved at", os.path.abspath(filename))
 
 url = input("Enter url : ")
