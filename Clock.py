@@ -7,14 +7,21 @@ from winsound import Beep
 from datetime import datetime
 from pytz import timezone, all_timezones
 
+def CurrentTime():
+    while True:
+        Hours = int(time.strftime('%H'))
+        Minutes = int(time.strftime('%M'))
+        Seconds = int(time.strftime('%S'))
+        print(f"{Hours:02d}:{Minutes:02d}:{Seconds:02d}", end="\r")
+
 def Alarm():
     ''' Ring's at a specific time '''
 
     Hours = int(time.strftime('%H'))
     Minutes = int(time.strftime('%M'))
     Seconds = int(time.strftime('%S'))
-    realTime = (f"{Hours:02d}:{Minutes:02d}:{Seconds:02d}")
-    print(f"Real time is {realTime}")
+    currentTime = (f"{Hours:02d}:{Minutes:02d}:{Seconds:02d}")
+    print(f"Current time is {currentTime}")
 
     inputHours = int(input("Enter hours : "))
     inputMinutes = int(input("Enter minutes : "))
@@ -109,18 +116,21 @@ def CountdownTimer():
     
     Beep(frequency=2500, duration=5000)
 
-userInput = int(input("Press 1 for Alarm\nPress 2 for World Clock\nPress 3 for Stopwatch\nPress 4 for Countdown Timer\n"))
+userInput = int(input("Press 1 for Current Time\nPress 2 for Alarm\nPress 3 for World Clock\nPress 4 for Stopwatch\nPress 5 for Countdown Timer\n"))
 
 if (userInput == 1):
-    Alarm()
+    CurrentTime()
 
 elif (userInput == 2):
-    WorldClock()
+    Alarm()
 
 elif (userInput == 3):
-    Stopwatch()
+    WorldClock()
 
 elif (userInput == 4):
+    Stopwatch()
+
+elif (userInput == 5):
     CountdownTimer()
 
 else:
